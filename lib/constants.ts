@@ -7,7 +7,7 @@ export const COMPANY_INFO = {
     "Leading provider of comprehensive technology solutions, specializing in network infrastructure, IT services, and digital transformation.",
   email: "info@nextworks.com.ng",
   phone: ["+234 809 965 2296"],
-  address: "8, Kehinde Akamo street, Ilupeju, Lagos, Nigeria",
+  address: "8 Kehinde Akamo, Off Michael Adekoya Road, Ilupeju Lagos",
 }
 
 export const SERVICES: Service[] = [
