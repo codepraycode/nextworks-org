@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Sora } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+// @ts-expect-error Missing type declarations for side-effect import of './globals.css'
 import "./globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
