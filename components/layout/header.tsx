@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {COMPANY_INFO} from "@/lib/constants";
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,6 +59,8 @@ export const Header: React.FC = () => {
         if (href === "/") return pathname === "/";
         return pathname.startsWith(href);
     };
+
+    const phone = COMPANY_INFO.phone.at(0);
 
     return (
         <header
@@ -145,13 +148,11 @@ export const Header: React.FC = () => {
                 {/* Desktop CTA */}
                 <div className="hidden lg:flex items-center gap-4">
                     <a
-                        href="tel:+2348080240366"
+                        href={`tel:${phone}`}
                         className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                         <Phone className="h-4 w-4" />
-                        <span className="hidden xl:inline">
-                            +234 808 024 0366
-                        </span>
+                        <span className="hidden xl:inline">{phone}</span>
                     </a>
                     <Link
                         href="/contact"
